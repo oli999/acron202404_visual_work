@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step06_createElement.html</title>
+    <style>
+        .container{
+            width: 768px; 
+            margin: 0 auto; /* 위 아래 margin : 0 , 좌우 margin : auto (동일하게 부여됨) */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>문서 요소를 필요한 시점에 만들어서 원하는 위치에 넣기</h1>
+        <input type="text" placeholder="할일 입력..." id="inputTodo">
+        <button id="addBtn">추가하기</button>
+        <ol>
+            
+        </ol>
+    </div>
+    <script>
+        //추가하기 버튼을 눌렀을때 실행할 함수 등록 
+        document.querySelector("#addBtn").addEventListener("click", ()=>{
+            //1. li 요소 만들기
+            const newLi = document.createElement("li");
+            //2. 입력한 문자열 읽어오기
+            const todo = document.querySelector("#inputTodo").value ;
+            //3. li 요소의 innerText 로 읽어온 문자열 출력하기
+            newLi.innerText = todo;
+            //4. ol 의 자식 요소로 li 요소를 추가하기 
+            document.querySelector("ol").append(newLi);
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
