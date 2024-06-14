@@ -24,8 +24,8 @@
 <script>
 	document.querySelector("#showBtn")
 	.addEventListener("click", function(){
-		document.querySelector("#one")
-		.style.display="inline";
+		//span 요소는 원래 inline 요소이기 때문에 보이게 할때도 inline 해서 보이게 해야한다. 
+		document.querySelector("#one").style.display="inline";
 	});
 </script>	
 </body>
